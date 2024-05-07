@@ -1,7 +1,4 @@
- 
-# SBSPS-Challenge-10621-1692205029 
- 
-## Identifying Patterns and Trends in Campus Placement Data using Machine Learning 
+# Identifying Patterns and Trends in Campus Placement Data using Machine Learning 
  
 The Placement Prediction Flask App is a web application designed to predict the likelihood of placement for students based on various factors. It utilizes machine learning algorithms to analyze student data and provide accurate placement predictions. 
  
