@@ -1,0 +1,13 @@
+Dependencies:
+
+* flask (micro web framework)
+
+* xgboost version- 1.5.1
+
+* scikit-learn version- 1.2.0
+
+* numpy
+
+* pickle
+
+NOTE: The packages must be same version as it is mentioned in the dependencies otherwise it will not work

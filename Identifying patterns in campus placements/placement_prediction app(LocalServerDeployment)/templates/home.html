@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Placement Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        form p {
+            margin-bottom: 10px;
+        }
+        form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #45a049;
+        }
+        .prediction-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>Placement Prediction</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+        <p>CGPA: <input type="text" name="CGPA" placeholder="1 to 10"></p>
+        <p>Internships: <input type="text" name="Internships" placeholder="Enter the number of internships you have attended"></p>
+        <p>Projects: <input type="text" name="Projects" placeholder="Enter the number of projects you have done in the respective job domain"></p>
+        <p>Workshops/Certifications: <input type="text" name="Workshops/Certifications" placeholder="Enter the number of workshops or certifications you have completed"></p>
+        <p>Aptitude Test Score: <input type="text" name="AptitudeTestScore" placeholder="1 to 100"></p>
+        <p>Soft Skills Rating: <input type="text" name="SoftSkillsRating" placeholder="1 to 5"></p>
+        <p>Extracurricular Activities: <input type="text" name="ExtracurricularActivities" placeholder="1 for yes, 0 for no"></p>
+        <p>Placement Training: <input type="text" name="PlacementTraining" placeholder="1 for yes, 0 for no"></p>
+        <p>SSC Marks: <input type="text" name="SSC_Marks" placeholder="1 to 100"></p>
+        <p>HSC Marks: <input type="text" name="HSC_Marks" placeholder="1 to 100"></p>
+        <button type="submit">Predict</button>
+    </form>
+    <p class="prediction-text">{{ prediction_text }}</p>
+</body>
+</html>
